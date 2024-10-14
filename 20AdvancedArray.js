@@ -17,7 +17,7 @@ let f=arr.filter((x)=>{
 })
 console.log(f)
 
-// reduce   :-It shows thge sum of whole array
+// reduce   :-It shows thge reduced form of whole array
 let sum=arr.reduce((x,y)=>{
     return x+y
 })

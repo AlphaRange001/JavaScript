@@ -7,7 +7,7 @@ console.log(sentence)
 
 //escape sequence 
 
-let a='ban\"na'
+let a='ban\'na'
 console.log(a)
 
 let myObj = {}
