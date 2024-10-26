@@ -35,3 +35,22 @@ function hello(){
     alert("yes i have already executed this function")
 }
 add(11,hello)
+
+
+// isse samjho acche se call back
+
+function input(callback) {
+
+    let a = prompt("Enter 1st no.")
+    let b = prompt("Enter 2nd no.")
+    a = Number.parseInt(a)
+    b = Number.parseInt(b)
+    callback(a, b)
+
+}
+function sum(a, b) {
+let c = a + b
+alert(c)
+return c
+}
+input(sum)
