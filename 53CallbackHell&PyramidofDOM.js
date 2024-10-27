@@ -124,46 +124,83 @@
 
 
 // Q-5
-
-// function chain1(chain2){
-//     alert("I'm chain 1")
-// chain2()
-// }
-// function chain2(){
-//     alert("I,m chain2")
-//     chain3()
-// }
-// chain1(chain2)
-// function chain3(){
-//     alert("I am chain3")
-//     chain4()
-// }
-// chain2(chain3)
-// function chain4(){
-//     alert("i ma chain4")
+// function chain1(chain2) {
+//     alert("I'm chain 1");
+//     chain2();
 // }
 
+// function chain2(chain3) {
+//     alert("I'm chain 2");
+//     chain3();
+// }
+
+// function chain3(chain4) {
+//     alert("I am chain 3");
+//     chain4();
+// }
+
+// function chain4() {
+//     alert("I am chain 4");
+// }
+
+// // Start the chain
+// chain1(() => chain2(() => chain3(chain4)));
 
 
 
 
+// let a=document.createElement("button")
+// a.innerHTML="bello"
+// document.body.append(a)
+// let b=document.getElementsByTagName("button")[0]
+// function hello(){
+// alert("how are you hello")
+// }
+// function bello(){
+// alert("how are you bello")
+// }
+// a.addEventListener('click',bello)
+// b.addEventListener('click',hello)
+
+
+//Q-6
+
+// function inner(callback) {
+// let a = document.getElementsByTagName("button")[0]
+//     a.innerHTML = "button1"
+//     callback(a)
+// }
+
+// function callbackk(z) {
+//     function alertt() {
+//         alert("Hello button1")
+//     }
+//     z.addEventListener('click', alertt)
+// }
+
+// inner(callbackk)
+
+
+function arr(callback) {
+    let a = [1, 2, 3, 5, 6, 7]
+    callback(a)
+}
+
+function callbackk(a) {
+    let b = a.map((element) => {
+        return element * 8
+    }
+    )
+    alert(b)
+}
+arr(callbackk)
 
 
 
 
+// let arr=[4,5,6,7]
+// arr.map((a)=>{
+//     return a*3
+// })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(arr)
