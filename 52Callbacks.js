@@ -8,20 +8,20 @@ console.log("hello")
 
 
 
-function loader(srcc, callback) {
-    let script = document.createElement("script")
-    script.src = srcc
-    script.onload = function () {
-        console.log("hello")
-        alert("hello");
-        callback()
-    }
-    document.body.appendChild(script)
-}
-let gm = () => {
-    alert("gm");
-}
-loader("https://code.jquery.com/jquery-3.6.0.min.js", gm)
+// function loader(srcc, callback) {
+//     let script = document.createElement("script")
+//     script.src = srcc
+//     script.onload = function () {
+//         console.log("hello")
+//         alert("hello");
+//         callback()
+//     }
+//     document.body.appendChild(script)
+// }
+// let gm = () => {
+//     alert("gm");
+// }
+// loader("https://code.jquery.com/jquery-3.6.0.min.js", gm)
 
 
 
