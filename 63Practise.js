@@ -23,8 +23,8 @@
 //         document.body.appendChild(script)
 //         alert("Loaded Successfully1")
 //     }, 4000)
-    
-  
+
+
 // }
 // let script1 = document.createElement("script")
 // async function f2(src) {
@@ -45,3 +45,44 @@
 // main()
 
 
+// async function f1() {
+
+//     setTimeout(() => {
+//         // try {
+//             let p1 = new Promise((resolve, reject) => {
+//               return  reject("This have an error")
+//             })
+//         // }
+//         // catch (error) {
+//         //     alert(error)
+//         // }
+//     }, 3000)
+// }
+// f1()
+
+
+async function a1() {
+    let p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("I am first waitng 2 sec")
+            resolve(1)
+        }, 2000)
+    })
+    let p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("I am second waitng 4 sec")
+            resolve(2)
+        }, 4000)
+    })
+    let p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("I am third waitng 6 sec")
+            resolve(3)
+        }, 6000)
+    })
+    let a = await p1
+    let b = await p2
+    let c = await p3
+return[a,b,c]
+}
+a1()

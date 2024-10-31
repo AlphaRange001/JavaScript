@@ -1,21 +1,21 @@
-// function f1() {
-//     try {
-//         console.log("hello")
-//         console.log(hello)
+function f1() {
+    try {
+        console.log("hello")
+        console.log(hello)
 
-//     }
-//     catch (error) {
-//         console.log("error detected")
-//         // console.log(p)
-//         return
+    }
+    catch (error) {
+        console.log("error detected")
+        // console.log(p)
+        return
 
-//     }
-//     finally {
-//         console.log("hello finally")
-//     }
-// }
+    }
+    finally {
+        console.log("hello finally")
+    }
+}
 
 
-// f1()
+f1()
 
 

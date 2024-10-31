@@ -24,6 +24,7 @@ let arr = [1, 23, 3, 57, 3, 4, 5]
 //     }
 
 // } console.log(arr1)
+let len=arr.length
 let sum=arr.reduce((x,y)=>{
     return x+y
 })
@@ -36,7 +37,7 @@ for(let i=0;i<arr.length;i++){
         max=arr[i]
       
     }
-    if{i< arr.length -1}
+    if(i<  (len-1)){}
 }
 // console.log(previousmax)
 // console.log(max)
