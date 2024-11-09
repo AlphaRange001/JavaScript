@@ -1,0 +1,8 @@
+localStorage.setItem("hello","bello")
+LocalStorage.setItem("keyy","valuye")
+let key=prompt("Enter key value :")
+let value=prompt("Enter value :")
+localStorage.setItem(key,value)
+console.log(`key is ${key} and it's value is ${value}`)
+localStorage.clear()
+sessionStorage.setItem("hello","bello")
