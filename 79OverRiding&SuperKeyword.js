@@ -1,6 +1,7 @@
 class student {
     name(name1) {
-        console.log(name1)
+        this.namee=name1
+        console.log()
     }
 }
 class update extends student {
