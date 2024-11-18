@@ -12,7 +12,7 @@ first.addEventListener('click',function(e){
 second.addEventListener('click',secondd)
 
 
-// ...................Bubbling............
+// // ...................Bubbling............
 
 document.querySelector("ul").addEventListener('click', function (e) {
     console.log("I am parent")
@@ -63,7 +63,7 @@ document.querySelectorAll("ul")[0].addEventListener('click', function (e) {
 document.querySelectorAll("button").forEach((a) => {
     a.addEventListener('click', function (e) {
         a.remove()
-        console.log(a.tagName);
-        console.log(e.target.innerHTML);
+        console.log(e.target.tagName);
+        // console.log(e.target.innerHTML);
     })
 })
