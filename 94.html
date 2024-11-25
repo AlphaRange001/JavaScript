@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        img {
+
+            width: 100px;
+            align-self: center;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15%;
+            gap: 10px;
+            border: 2px solid red;
+            height: 200px;
+            width: 70%;
+        }
+
+        .inputs {
+            align-self: center;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        button {
+            width: 100px;
+            align-self: center;
+        }
+
+        .button1 {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- <div>
-        <img src="https://i.pinimg.com/736x/90/76/6d/90766df2ac3ce285e9b7858a08ec9c67.jpg" alt="">
-        <ul>
-            <li class="hour" aria-placeholder="Hours"></li>
-            <li class="minute"></li>
-            <li class="second"></li>
-        </ul> -->
-   
+    <img src="https://png.pngtree.com/png-vector/20190726/ourmid/pngtree-siren-alarm-icon-png-image_1609902.jpg" alt="">
+    <div class="inputs">
+        <input type="text" class="first" placeholder="Hours">
+        <input type="text" class="second" placeholder="Minutes">
+        <input type="text" class="third" placeholder="Second">
+    </div>
+    <div class="button1">
+        <button class="button">Set Alarm</button>
     </div>
     <script src="94Alarm.js"></script>
 </body>
+
 </html>

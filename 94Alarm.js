@@ -19,29 +19,50 @@
 
 
 let date = new Date()
-let datee = date.toDateString()
-console.log(datee)
-let hourr=date.getHours()
-console.log(typeof hourr)
-let time = date.toTimeString() 
-console.log(time);
-console.log(time)
-let GotHour=time.substring(0,2)
-GotHour=parseInt(GotHour)
-let GotMinute=time.substring(3,5)
-GotMinute=parseInt(GotMinute)
-let GotSecond=time.substring(6,8)
-GotSecond=parseInt(GotSecond)
-let GiveHour=prompt("Enter hour")
-GiveHour=parseInt(GiveHour)
-let GiveMinute=prompt("Enter Minute")
-GiveMinute=parseInt(GiveMinute)
-let GiveSecond=prompt("Enter Second")
-GiveSecond=parseInt(GiveSecond)
-let timeRemains=(GiveHour-GotHour)*60*60+(GiveMinute-GotMinute)*60+(GiveSecond-GotSecond)
-console.log(timeRemains)
+let GotHour = date.getHours()
+let GotMinute = date.getMinutes()
+let GotSecond = date.getSeconds()
+let GiveHour, GiveMinute, GiveSecond;
+let GetMinute, GetHour, GetSecond;
 
-setTimeout(()=>{
-    let audio=new Audio('alert_tone.mp3')
-    audio.play()
-},timeRemains*1000)
+function add() {
+    GiveHour = document.querySelector(".first")
+    GetHour = GiveHour.value
+    GetHour = parseInt(GetHour)
+    console.log(GetHour);
+
+    GiveMinute = document.querySelector(".second")
+    GetMinute = GiveMinute.value
+    GetMinute = parseInt(GetMinute)
+    console.log(GetMinute)
+    console.log(GetMinute)
+
+    GiveSecond = document.querySelector(".third")
+    GetSecond = GiveSecond.value
+    GetSecond = parseInt(GetSecond)
+    console.log(GetSecond);
+    let timeRemains = (GetHour - GotHour) * 60 * 60 + (GetMinute - GotMinute) * 60 + (GetSecond - GotMinute)
+    alert(`${timeRemains - 15} second remains`)
+    if (timeRemains < 0) {
+        alert("Kyu Samay ke piche jama chahte ho")
+    }
+    else {
+        setTimeout(() => {
+            let audio = new Audio('alert_tone.mp3')
+            audio.play()
+            setInterval(function hovereffect() {
+                let image = document.querySelector("img");
+                image.style.transform = "scale(1.2)"
+            }, 100)
+            setInterval(function hovereffect() {
+                let image = document.querySelector("img");
+                image.style.transform = "scale(1)"
+            }, 100)
+        }, (timeRemains) * 1000)
+    }
+    let alarmadd = document.createElement("p")
+    alarmadd.textContent = `Your alarm is registered for ${GetHour}:${GetMinute}:${GetSecond} & Remaining time is:   ${timeRemains}seconds`
+    let divi = document.querySelector(".button1")
+    divi.appendChild(alarmadd)
+}
+document.querySelector(".button").addEventListener('click', add)

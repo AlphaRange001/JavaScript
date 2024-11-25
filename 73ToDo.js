@@ -1,5 +1,5 @@
-let data = document.querySelectorAll(".input")[0]
 function add() {
+    let data = document.querySelectorAll(".input")[0]
     let pdata = data.value
     let middle=document.createElement('p')
     middle.textContent=pdata
