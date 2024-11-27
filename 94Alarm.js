@@ -1,23 +1,3 @@
-// let num = prompt("enr time");
-// num = parseInt(num);
-// function alarm() {
-//     setTimeout(() => {
-//         let audio = new Audio('alert_tone.mp3')
-//         audio.play();
-//     }, 1000)
-// }
-// alarm() 
-
-
-// let date = new Date()
-// let datee = date.toDateString()
-// let time = date.toTimeString()
-// setTimeout(()=>{
-//     let audio=new Audio('alert_tone.mp3')
-//     audio.play()
-// },1000)
-
-
 let date = new Date()
 let GotHour = date.getHours()
 let GotMinute = date.getMinutes()
@@ -42,7 +22,6 @@ function add() {
     GetSecond = parseInt(GetSecond)
     console.log(GetSecond);
     let timeRemains = (GetHour - GotHour) * 60 * 60 + (GetMinute - GotMinute) * 60 + (GetSecond - GotMinute)
-    alert(`${timeRemains - 15} second remains`)
     if (timeRemains < 0) {
         alert("Kyu Samay ke piche jama chahte ho")
     }
@@ -53,15 +32,15 @@ function add() {
             setInterval(function hovereffect() {
                 let image = document.querySelector("img");
                 image.style.transform = "scale(1.2)"
-            }, 100)
+            }, 500)
             setInterval(function hovereffect() {
                 let image = document.querySelector("img");
                 image.style.transform = "scale(1)"
-            }, 100)
-        }, (timeRemains) * 1000)
+            }, 500)
+        }, (timeRemains-15) * 1000)
     }
     let alarmadd = document.createElement("p")
-    alarmadd.textContent = `Your alarm is registered for ${GetHour}:${GetMinute}:${GetSecond} & Remaining time is:   ${timeRemains}seconds`
+    alarmadd.textContent = `Your alarm is registered for ${GetHour}:${GetMinute}:${GetSecond} & Remaining time is:   ${timeRemains-15}seconds`
     let divi = document.querySelector(".button1")
     divi.appendChild(alarmadd)
 }
